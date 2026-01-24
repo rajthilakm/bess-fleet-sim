@@ -17,9 +17,3 @@ batteries:
     efficiency: 0.9
     initial_soe_pct: 100
  
-  # - id: "BESS-003"
-  #   capacity_mwh: 200
-  #   charge_rate_mw: 100
-  #   discharge_rate_mw: 100
-  #   efficiency: 0.9
-  #   initial_soe_pct: 50

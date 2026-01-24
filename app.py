@@ -46,7 +46,7 @@ def reset_defaults():
 
 st.sidebar.subheader("Strategy Settings")
 strategy_type = st.sidebar.selectbox("Strategy", ["Threshold-Based"])
-charge_thresh = st.sidebar.slider("Charge Threshold ($/MWh)", 0.0, 150.0, key="charge_thresh", step=1.0, help="Charge when price is below this.")
+charge_thresh = st.sidebar.slider("Charge Threshold ($/MWh)", 50.0, 150.0, key="charge_thresh", step=1.0, help="Charge when price is below this.")
 discharge_thresh = st.sidebar.slider("Discharge Threshold ($/MWh)", 100.0, 300.0, key="discharge_thresh", step=1.0, help="Discharge when price is above this.")
 
 st.sidebar.subheader("Price Simulation Parameters")
