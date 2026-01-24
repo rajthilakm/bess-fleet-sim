@@ -52,7 +52,7 @@ discharge_thresh = st.sidebar.slider("Discharge Threshold ($/MWh)", 100.0, 300.0
 st.sidebar.subheader("Price Simulation Parameters")
 sim_days = st.sidebar.slider("Duration (Days)", 1, 30, key="sim_days")
 base_price = st.sidebar.number_input("Base Price ($/MWh)", key="base_price")
-peak_multiplier = st.sidebar.slider("Peak Multiplier", 1.0, 4.0, key="peak_multiplier", step=0.1, help="Multiplier for evening peaks.")
+peak_multiplier = st.sidebar.slider("Peak Multiplier", 1.0, 5.0, key="peak_multiplier", step=0.1, help="Multiplier for evening peaks.")
 
 # Main Dashboard
 st.title("Battery Fleet Optimization")
