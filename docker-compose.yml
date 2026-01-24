@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  bess-sim:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./config:/app/config
+      - ./simulation_results_csv:/app/simulation_results_csv
+    environment:
+      - PYTHONUNBUFFERED=1
