@@ -1,13 +1,13 @@
 fleet_global:
-  max_charge_mw: 300
-  max_discharge_mw: 300
+  max_charge_mw: 250
+  max_discharge_mw: 250
 
 batteries:
   - id: "BESS-001"
     capacity_mwh: 100
     charge_rate_mw: 100
     discharge_rate_mw: 100
-    efficiency: 1
+    efficiency: 0.9
     initial_soe_pct: 100
   
   - id: "BESS-002"
