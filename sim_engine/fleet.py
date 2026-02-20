@@ -19,11 +19,11 @@ class Fleet:
     
     @property
     def agg_charge_rate(self):
-        return sum(b.max_charge_rate for b in self.batteries)
+        return sum(b.max_charge_mw for b in self.batteries)
     
     @property
     def agg_discharge_rate(self):
-        return sum(b.max_discharge_rate for b in self.batteries)
+        return sum(b.max_discharge_mw for b in self.batteries)
         
     def dispatch(self, battery_id: str, mw: float, duration_hours: float = 1.0) -> float:
         """
@@ -39,7 +39,7 @@ class Fleet:
             {
                 "id": b.id,
                 "soe_mwh": b.soe_mwh,
-                "soe_perc": (b.soe_mwh / b.capacity_mwh) * 100
+                "soe_perc": (b.soe_mwh / b.capacity_mwh * 100) if b.capacity_mwh > 0 else 0.0
             }
             for b in self.batteries
         ]
